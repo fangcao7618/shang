@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上机题</title>
+<style type="text/css">
+*{ padding:0px; margin:0px;}
+body{ background-color:#999;}
+.fl{ float:left; display:inline;}
+.header{height:100px; width:100%; background-color:#666;}
+.left{width:200px; min-width:200px; background-color:#333;}
+.right{min-width:500px; background-color:#999;}
+.footer{height:50px; width:100%; background-color:#666;}
+</style>
+</head>
+
+<body>
+	<div class="header fl"></div>
+    <div class="content">
+    <div class="left fl" id="leftM">s</div>
+    <div class="right fl" id="rightM">
+    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         
+    </div>
+    </div>
+    <div class="footer fl"></div>
+</body>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+	(function(){
+			function setGridHeight(){
+                try{
+					var w = (window.innerWidth || (window.document.documentElement.clientWidth || window.document.body.clientWidth||document.body.offsetWidth));
+                    var h = (window.innerHeight || (window.document.documentElement.clientHeight || window.document.body.clientHeight||document.body.offsetHeight));
+					var vh=jQuery("#rightM").height();
+					var ch=jQuery("#leftM").height();
+					
+					h=h-150;
+					if(vh>h){
+						h=vh;
+					}else{
+						h=h;
+					}
+			
+				   jQuery("#rightM").width(w-218);
+                   jQuery("#leftM").css("height", h);
+                   jQuery("#rightM").css("height", h);
+                   
+                }catch(e){}
+            }
+           setGridHeight();
+           window.onresize = setGridHeight;
+	})();
+</script>
+</html>
